@@ -28,22 +28,5 @@ import { resolve } from 'path';
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
-  build: {
-    lib: {
-      // Could also be a dictionary or array of multiple entry points
-      entry: resolve(__dirname, 'index.html'),
-      name: 'hexlet-flowbot',
-      // the proper extensions will be added
-      fileName: 'hexlet-flowbot',
-    },
-    rollupOptions: {
-      external: ['react', 'react-dom'],
-      output: {
-        globals: {
-          react: 'React',
-          'react-dom': 'ReactDOM',
-        },
-      },
-    },
-  },
+  base: '/react-flowbot-ui-kit/'
 })
